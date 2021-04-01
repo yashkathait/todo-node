@@ -1,0 +1,12 @@
+<%- include ("./partials/header") %>
+
+<div class="ui main text container segment">
+	<div class="ui huge header">Update TODO</div>
+	<form action="/todo/<%=todo._id %>?_method=PUT" method="POST">
+		<input type="text" name="todo[text]" value= "<%= todo.text%>">
+		<input type="text" name="todo[day]" value= "<%= todo.day%>">
+		<button>Submit</button>
+	</form>
+</div>
+
+<%- include ("./partials/footer") %>

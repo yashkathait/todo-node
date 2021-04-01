@@ -1,0 +1,15 @@
+<%- include ("./partials/header") %>
+
+<div class="ui main text container">
+	<% ToDos.forEach(function(todo){ %>
+	<div class="ui main text container segment">
+		<h2><%= todo.text %></h2>
+		<h4><%= todo.day %></h4>
+		<a href="/todo/<%= todo._id %>/edit">Edit</a>
+		<a href="/todo/<%= todo._id %>/delete">Delete</a>
+	</div>
+<% }) %>
+</div>
+
+
+<%- include ("./partials/footer") %>
