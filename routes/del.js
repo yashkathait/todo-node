@@ -1,8 +1,8 @@
 var express = require("express");
 var router = express.Router();
 var ToDo = require("../models/to");
-var Remove = require("../Control/Delete")
+var Func = require("../Controler/fun")
 
-router.get("/todo/:id/delete", Remove.TodoDelete)
+router.get("/todo/:id/delete", Func.TodoDelete)
 
 module.exports = router;

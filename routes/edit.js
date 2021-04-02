@@ -1,11 +1,10 @@
 var express = require("express");
 var router = express.Router();
 var ToDo = require("../models/to");
-var Update = require("../Control/Update")
-var Edit = require("../Control/Edit")
+var Func = require("../Controler/fun")
 
-router.get("/todo/:id/edit", Edit.TodoEdit )
+router.get("/todo/:id/edit", Func.TodoEdit )
 
-router.put("/todo/:id" , Update.TodoUpdate)
+router.put("/todo/:id" , Func.TodoUpdate)
 
 module.exports = router;
